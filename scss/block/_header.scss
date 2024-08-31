@@ -1,0 +1,76 @@
+.top{
+    background-repeat: no-repeat;
+    background-image: url('../images/hero_bg_tablet.svg');
+    background-position: top;
+}
+
+@media screen and (min-width: 769px){
+    .top{
+        background-image: url('../images/hero_bg_desktop.svg');
+        background-position: right top;
+    }   
+}
+
+.header {
+  padding-top: 40px;
+
+  &__menu {
+    width: 28px;
+    height: 17px;
+    background-repeat: no-repeat;
+    background-image: url("../images/header_menu.svg");
+  }
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item_link {
+    font-weight: 700;
+    font-size: 15px;
+    color: $blue;
+    opacity: 0.7;
+  }
+
+  &__item_link:hover{
+    opacity: 1;
+  }
+
+  &__content {
+    display: flex;
+    gap: 64px;
+    align-items: center;
+  }
+
+  &__list {
+    display: none;
+  }
+
+  &__button {
+    display: none;
+  }
+
+  &__button:hover{
+    background-color: $light-pink;
+  }
+
+  @media screen and (min-width: 768px) {
+
+    &__menu{
+        display: none;
+    }
+
+    &__list {
+      display: flex;
+      gap: 40px;
+    }
+
+    &__button {
+      @include button;
+      display: inline-block;
+      box-shadow: 10px 10px 25px -10px $blue-shadow;
+    }
+  }
+}

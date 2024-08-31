@@ -1,0 +1,147 @@
+.hero {
+  padding-top: 32px;
+  padding-bottom: 80px;
+
+  &__img_block {
+    max-width: 128px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    font-family: $second-font;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 112%;
+    letter-spacing: -0.01em;
+    color: $blue;
+    margin-bottom: 24px;
+    max-width: 445px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  &__email_input {
+    font-weight: 700;
+    font-size: 15px;
+    color: $blue;
+    opacity: 0.6;
+    border-radius: 24px;
+    border: none;
+    box-shadow: 10px 10px 25px -10px $blue-shadow;
+    background-color: $white;
+    padding-left: 27px;
+    padding-right: 27px;
+    padding-top: 16px;
+    padding-bottom: 14px;
+    width: 327px;
+    margin-bottom: 16px;
+  }
+
+  &__button {
+    @include button;
+    padding: 16px 102px 14px 102px;
+  }
+
+  &__button:hover {
+    background-color: $light-pink;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 15px;
+    color: $light-blue;
+    text-align: center;
+  }
+
+  &__text_link {
+    font-weight: 700;
+  }
+
+  &__text_link:hover {
+    color: $blue;
+  }
+
+  &__form {
+    max-width: 327px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 24px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-top: 48px;
+    padding-bottom: 100px;
+
+    &__img_block {
+      max-width: 159px;
+      margin-bottom: 48px;
+    }
+
+    &__title {
+      font-size: 48px;
+      color: $blue;
+      max-width: 75%;
+      margin-bottom: 22px;
+    }
+
+    &__form {
+      margin-bottom: 16px;
+      max-width: 445px;
+      position: relative;
+    }
+
+    &__email_input {
+      padding: 16px 24px 14px 26px;
+      width: 100%;
+      margin-bottom: 0;
+      position: relative;
+    }
+
+    &__button {
+      padding: 16px 24px 14px 26px;
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  @media screen and (min-width: 1110px) {
+    padding-top: 75px;
+    padding-bottom: 75px;
+
+    &__img_block {
+      max-width: 100%;
+      margin: 0;
+    }
+
+    &__email_input {
+      padding-right: 180px;
+    }
+
+    &__block {
+      display: flex;
+      gap: 200px;
+      align-items: center;
+      flex-direction: row-reverse;
+      justify-content: left;
+    }
+    &__title {
+      font-size: 72px;
+      max-width: 576px;
+      margin: 0;
+      margin-bottom: 20px;
+      text-align: start;
+    }
+    &__form {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    &__text {
+      text-align: start;
+      padding-left: 27px;
+    }
+  }
+}
